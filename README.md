@@ -82,7 +82,7 @@ Customize the Git external tools.
 
 1.	In the “Commands” tab, select "Git" in the "Menu Bar" list
 2.	Click in the “Add Command” button
-3.	Select “External command N”, where N corresponds to the command creation order e.g. "Git commit" command is the "External command 1", then rename it with the command name.
+3.	Select “External command N”, where N corresponds to the command creation order e.g. "Git commit" command is the "External command 1", then rename it with the corresponding command name.
 
 
 ![](resources/GitSubMenu1.png)
