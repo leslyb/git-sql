@@ -9,7 +9,7 @@ These instructions will help you to implement a source control integration for S
 ### Prerequisites
 
 * Any version of Microsoft SQL Server Management Studio
-* Git installed (Follow the instruction from the website https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* Git (Follow the instruction from the website https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 
 ## SQL Server Management Studio - External tools
@@ -68,14 +68,14 @@ Customize the Git external tools.
 
 #### Add a Git menu
 
-![](resources/GitMenu.png)
-
 1.	In SSMS, go to Tools menu, then select Customize...
 2.	In the “Commands” tab, select “Menu bar” in the “Menu Bar” list
 3.	Click in the “Add New Menu” button
 4.	Select “New Menu”
 5.	Click in the “Modify Selection” button
 6.	In the “Modify Selection” box, enter the new menu name e.g. “Git”, and click in the “Begin a Group” button. 
+
+![](resources/GitMenu.png)
 
 
 #### Add a sub-menu for each Git command
@@ -87,7 +87,11 @@ Customize the Git external tools.
 
 ![](resources/GitSubMenu1.png)
 
+4. Rename each Git command
+
 ![](resources/GitSubMenu2.png)
+
+5. The result looks like
 
 ![](resources/GitSubMenu3.png)
 
