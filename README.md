@@ -96,26 +96,26 @@ Customize the Git external tools.
 
 #### Existing file in remote repository ?
 
-1. Clone your repository somewhere in your file system using "`git clone [<repository>]`"
+1. Clone your repository on your computer using "`git clone [<repository>]`"
 2. Open your .sql file in SSMS
 3. Modify and save it
-4. Commit using "Commit" menu under Git menu (This command adds all the modified files and commit them)
-5. Push it using "Git push"  menu under Git menu
+4. Commit using "Commit" menu under "Git" menu (This command adds all the modified files and commit them)
+5. Push it using "Git push" menu under "Git" menu
 
 #### New file ?
 
-1. Clone your repository somewhere in your file system using "`git clone [<repository>]`"
+1. Clone your repository on your computer using "`git clone [<repository>]`"
 2. Create your .sql file in SSMS
 3. Save it under your local git repository folder
-4. Commit using "Commit" menu under Git menu (This command adds all the modified files and commit them)
-5. Push it using "Git push"  menu under Git menu
+4. Commit using "Commit" menu under "Git" menu (This command adds all the modified files and commit them)
+5. Push it using "Git push" menu under "Git" menu
 
 #### Delete file(s) from remote repository ?
 
-1. Clone your repository somewhere in your file system using "`git clone [<repository>]`"
+1. Clone your repository on your computer using "`git clone [<repository>]`"
 2. Delete the file(s) from your file system
-3. Commit using "Commit" menu under Git menu (This command adds all the modified files and commit them)
-4. Push it using "Git push"  menu under Git menu
+3. Commit using "Commit" menu under "Git" menu (This command adds all the modified files and commit them)
+4. Push the changes using "Git push" menu under "Git" menu
 
 ## Authors
 
