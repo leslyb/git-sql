@@ -4,62 +4,58 @@ Implement a source control for SQL Server Management Studio (SSMS).
 
 ## Getting Started
 
-These instructions will help you to implement a source control integration for SSMS.
+Below instructions will help you to implement a source control integration for SQL Server Management Studio (SSMS).
 
-### Prerequisites
+### What is SQL Server Management Studio (SSMS) - External tools ?
 
-* Any version of Microsoft SQL Server Management Studio
-* Git (Follow the instruction from the website https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-
-## SQL Server Management Studio - External tools
-
+You can launch any Microsoft Windows or Microsoft .NET Framework application from SSMS Tools menu.
 More info : https://technet.microsoft.com/en-us/library/ms177402(v=sql.110).aspx 
 
 ![](resources/ExternalTool.png)
 
+### Prerequisites
+
+* Any version of Microsoft SQL Server Management Studio
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ### Implementation
 
-Add an external tool by Git command.
-
-
 #### Define a custom Git editor
 
-Execute the following command in your Git bash
+Execute the following command in your Git bash, this will be used as an input tool, e.g., commit message
 
 *git config core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"*
 
-#### External tool - Git commit
+#### Define an External tool per Git command
 
-> A text editor must be defined for Git commit comments. See section *"Define a custom Git editor"*
+##### Git commit
 
 | Name | Value |
 | ------ | ------ |
 | Name    | &Git commit |
 | Command | C:\windows\SysWOW64\cmd.exe|
 | Arguments | /c ""C:\Program Files\Git\bin\sh.exe" --login -i -c "git add -A; git commit -e"" |
-| Initial directtory | $(ItemDir) |
+| Initial directory | $(ItemDir) |
 
 
-#### External tool - Git push
+##### Git push
 
 | Name | Value |
 | ------ | ------ |
 | Name    | &Git push |
 | Command | C:\windows\SysWOW64\cmd.exe|
 | Arguments | /c ""C:\Program Files\Git\bin\sh.exe" --login -i -c "git push"" |
-| Initial directtory | $(ItemDir) |
+| Initial directory | $(ItemDir) |
 
 
-#### External tool - Git pull
+##### Git pull
 
 | Name | Value |
 | ------ | ------ |
 | Name    | &Git pull |
 | Command | C:\windows\SysWOW64\cmd.exe|
 | Arguments | /c ""C:\Program Files\Git\bin\sh.exe" --login -i -c "git pull"" |
-| Initial directtory | $(ItemDir) |
+| Initial directory | $(ItemDir) |
 
 ### Customization
 
@@ -95,6 +91,30 @@ Customize the Git external tools.
 
 ![](resources/GitSubMenu3.png)
 
+### Usage examples
+
+#### Existing file in remote repository ?
+
+1. Clone your repository somewhere in your file system using "git clone <repository>"
+2. Open your .sql file in SSMS
+3. Modify and save it
+4. Commit using "Commit" menu under Git menu (This command adds all the modified files and commit them)
+5. Push it using "Git push"  menu under Git menu
+
+#### New file ?
+
+1. Clone your repository somewhere in your file system using "git clone <repository>"
+2. Create your .sql file in SSMS
+3. Save it under your local git repository folder
+4. Commit using "Commit" menu under Git menu (This command adds all the modified files and commit them)
+5. Push it using "Git push"  menu under Git menu
+
+#### Delete file(s) from remote repository ?
+
+1. Clone your repository somewhere in your file system using "git clone <repository>"
+2. Delete the file(s) from your file system
+3. Commit using "Commit" menu under Git menu (This command adds all the modified files and commit them)
+4. Push it using "Git push"  menu under Git menu
 
 ## Authors
 
